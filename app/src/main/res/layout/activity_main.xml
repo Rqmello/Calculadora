@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="end"
+        android:text="0"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="end"
+        android:text="0"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_result" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbt_backspace"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/black"
+        android:text="Backspace"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/mbt_number_seven"
+        app:layout_constraintEnd_toStartOf="@id/mbt_percent"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbt_percent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="%"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/mbt_division"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/mbt_backspace"
+        app:layout_constraintTop_toTopOf="@id/mbt_backspace" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbt_division"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="/"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/mbt_percent"
+        app:layout_constraintTop_toTopOf="@id/mbt_percent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbt_number_seven"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="7"
+        app:layout_constraintBottom_toTopOf="@id/mbt_number_four"
+        app:layout_constraintEnd_toStartOf="@id/mbt_number_eight"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbt_number_eight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="8"
+        app:layout_constraintEnd_toStartOf="@id/mbt_number_nine"
+        app:layout_constraintStart_toEndOf="@id/mbt_number_seven"
+        app:layout_constraintTop_toTopOf="@id/mbt_number_seven" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbt_number_nine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="9"
+        app:layout_constraintEnd_toStartOf="@id/mbt_multiplication"
+        app:layout_constraintStart_toEndOf="@id/mbt_number_eight"
+        app:layout_constraintTop_toTopOf="@id/mbt_number_eight" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbt_multiplication"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="*"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/mbt_number_nine"
+        app:layout_constraintTop_toTopOf="@id/mbt_number_nine" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbt_number_four"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="4"
+        app:layout_constraintBottom_toTopOf="@id/mbt_number_one"
+        app:layout_constraintEnd_toStartOf="@id/mbt_number_five"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbt_number_five"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="5"
+        app:layout_constraintEnd_toStartOf="@id/mbt_number_six"
+        app:layout_constraintStart_toEndOf="@id/mbt_number_four"
+        app:layout_constraintTop_toTopOf="@id/mbt_number_four" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbt_number_six"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="6"
+        app:layout_constraintEnd_toStartOf="@id/mbt_subtraction"
+        app:layout_constraintStart_toEndOf="@id/mbt_number_five"
+        app:layout_constraintTop_toTopOf="@id/mbt_number_five" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbt_subtraction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="-"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/mbt_number_six"
+        app:layout_constraintTop_toTopOf="@id/mbt_number_six" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbt_number_one"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@id/mbt_number_zero"
+        app:layout_constraintEnd_toStartOf="@id/mbt_number_two"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbt_number_two"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="2"
+        app:layout_constraintEnd_toStartOf="@id/mbt_number_three"
+        app:layout_constraintStart_toEndOf="@id/mbt_number_one"
+        app:layout_constraintTop_toTopOf="@id/mbt_number_one" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbt_number_three"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="3"
+        app:layout_constraintEnd_toStartOf="@id/mbt_addition"
+        app:layout_constraintStart_toEndOf="@id/mbt_number_two"
+        app:layout_constraintTop_toTopOf="@id/mbt_number_two" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbt_addition"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="+"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/mbt_number_three"
+        app:layout_constraintTop_toTopOf="@id/mbt_number_three" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbt_number_zero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="0"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/mbt_dot"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbt_dot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="."
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/mbt_equal"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/mbt_number_zero"
+        app:layout_constraintTop_toTopOf="@id/mbt_number_zero" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbt_equal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="="
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/mbt_dot"
+        app:layout_constraintTop_toTopOf="@id/mbt_dot" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
